@@ -8,7 +8,14 @@ warnings.filterwarnings("ignore")
 # -----------------------------
 # CONFIG
 # -----------------------------
-CSV_PATH = "D:\TU Claustal\CLASSES\Sommer2025\Seminar\Actual_Work\My_work\Test_data\open_meteo_51.78N10.35E563m.csv"
+from pathlib import Path
+
+# Project root = directory where main.py lives
+PROJECT_ROOT = Path(__file__).resolve().parent
+
+# Input file
+CSV_PATH = PROJECT_ROOT / "data" / "open_meteo_51.78N10.35E563m.csv"
+
 MIN_SAMPLES = 20             # minimum data points required
 
 # Candidate distributions

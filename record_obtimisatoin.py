@@ -1,7 +1,13 @@
 import pandas as pd
 
 # Load the CSV file
-file_path = r'D:\TU Claustal\CLASSES\Sommer2025\Seminar\Actual_Work\My_work\Test_data\open_meteo_51.78N10.35E563m.csv'
+from pathlib import Path
+
+# Project root = directory where main.py lives
+PROJECT_ROOT = Path(__file__).resolve().parent
+
+# Input file
+file_path = PROJECT_ROOT / "data" / "open_meteo_51.78N10.35E563m.csv"
 df = pd.read_csv(file_path)
 
 # Total number of rows

@@ -5,7 +5,7 @@ from copulas.multivariate import VineCopula
 from copulas.univariate import GammaUnivariate, GaussianUnivariate, BetaUnivariate, UniformUnivariate
 
 # Step 1: Load your real ODD data
-df = pd.read_csv('D:\TU Claustal\CLASSES\Sommer2025\Seminar\Actual_Work\My_work\Test_data\odd_weather_data.csv')  # Replace with your actual file path
+df = pd.read_csv('')  # Replace with your actual file path
 
 # Optional: Check and clean data
 df = df[['Rainmm', 'WindSpeedkmPerH', 'TemperaturePercentage', 'CloudCoverPercentage']].dropna()
@@ -94,7 +94,7 @@ simulated_data = simulated_df[(simulated_df >= 0).all(axis=1)]
 print(simulated_data.head())
 
 # Step 8: (Optional) Save to CSV
-simulated_data.to_csv('D:\TU Claustal\CLASSES\Sommer2025\Seminar\Actual_Work\My_work\Test_data\simulated_odd_output_result.csv', index=False)
+simulated_data.to_csv('', index=False)
 
 
 

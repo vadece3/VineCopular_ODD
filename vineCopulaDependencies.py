@@ -483,3 +483,30 @@ print(predicted_df.head(10))
 predicted_df.to_csv(output_path,
     index=False
 )
+
+# Step 7: Dependency Measurement Using Kendall’s Tau
+#
+# Purpose:
+# Quantify dependency strength and direction.
+#
+# Definition:
+# τ = (Number of concordant pairs − Number of discordant pairs) / Total pairs
+#
+# Interpretation:
+# τ > 0 → variables increase together
+# τ < 0 → one increases while the other decreases
+#
+# User Question Addressed:
+# "Should I use another tau because of different marginals?"
+#
+# Answer:
+# No. Kendall’s Tau is invariant to marginal distributions.
+#
+# Step 8: Interpreting Increase vs Decrease Relationships
+#
+# Purpose:
+# Explain dependency direction in practical terms.
+#
+# Example Interpretation:
+# If τ(Rain, Cloud) > 0:
+# An increase in rain tends to increase cloud cover.
