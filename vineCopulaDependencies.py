@@ -219,7 +219,7 @@ for driving_col, sub_df in subset_dfs.items():
         data = df_sub[col].values
         best_dist = detect_best_distribution(data)
 
-        marginal_class = COPULA_MARGINAL_MAP.get(best_dist, GaussianUnivariate)
+        marginal_class = COPULA_MARGINAL_MAP.get(best_dist)
         marginal = marginal_class()
         marginal.fit(data)
 
